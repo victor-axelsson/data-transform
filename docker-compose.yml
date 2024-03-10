@@ -1,0 +1,39 @@
+version: '3.3'
+
+services:
+  source:
+    image: mysql:5.7
+    restart: always
+    container_name: mysql_source
+    environment:
+      MYSQL_DATABASE: "source"
+      MYSQL_ROOT_USER: "root"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ROOT_HOST: "%"
+    ports:
+      - '3306:3306'
+    expose:
+      - "3306"
+    volumes:
+      - source-db:/var/lib/mysql
+
+  destination:
+    image: mysql:5.7
+    restart: always
+    container_name: mysql_destination
+    environment:
+      MYSQL_DATABASE: "destination"
+      MYSQL_ROOT_USER: "root"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_ROOT_HOST: "%"
+    ports:
+      - '3307:3306'
+    expose:
+      - "3307"
+    volumes:
+      - destination-db:/var/lib/mysql
+
+# Names our volume
+volumes:
+  source-db: {}
+  destination-db: {}

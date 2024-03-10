@@ -1,0 +1,329 @@
+[
+  {
+    "name": "clinvar_conflicting",
+    "columns": {
+      "CHROM": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 0
+        }
+      },
+      "POS": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 1
+        }
+      },
+      "REF": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 2
+        }
+      },
+      "ALT": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 3
+        }
+      },
+      "AF_ESP": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 4
+        }
+      },
+      "AF_EXAC": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 5
+        }
+      },
+      "AF_TGP": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 6
+        }
+      },
+      "CLNDISDB": {
+        "type": "text",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 7
+        }
+      },
+      "CLNDISDBINCL": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 8
+        }
+      },
+      "CLNDN": {
+        "type": "text",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 9
+        }
+      },
+      "CLNDNINCL": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 10
+        }
+      },
+      "CLNHGVS": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 11
+        }
+      },
+      "CLNSIGINCL": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 12
+        }
+      },
+      "CLNVC": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 13
+        }
+      },
+      "CLNVI": {
+        "type": "text",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 14
+        }
+      },
+      "MC": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 15
+        }
+      },
+      "ORIGIN": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 16
+        }
+      },
+      "SSR": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 17
+        }
+      },
+      "CLASS": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 18
+        }
+      },
+      "Allele": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 19
+        }
+      },
+      "Consequence": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 20
+        }
+      },
+      "IMPACT": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 21
+        }
+      },
+      "SYMBOL": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 22
+        }
+      },
+      "Feature_type": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 23
+        }
+      },
+      "Feature": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 24
+        }
+      },
+      "BIOTYPE": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 25
+        }
+      },
+      "EXON": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 26
+        }
+      },
+      "INTRON": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 27
+        }
+      },
+      "cDNA_position": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 28
+        }
+      },
+      "CDS_position": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 29
+        }
+      },
+      "Protein_position": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 30
+        }
+      },
+      "Amino_acids": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 31
+        }
+      },
+      "Codons": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 32
+        }
+      },
+      "DISTANCE": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 33
+        }
+      },
+      "STRAND": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 34
+        }
+      },
+      "BAM_EDIT": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 35
+        }
+      },
+      "SIFT": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 36
+        }
+      },
+      "PolyPhen": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 37
+        }
+      },
+      "MOTIF_NAME": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 38
+        }
+      },
+      "MOTIF_POS": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 39
+        }
+      },
+      "HIGH_INF_POS": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 40
+        }
+      },
+      "MOTIF_SCORE_CHANGE": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 41
+        }
+      },
+      "LoFtool": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 42
+        }
+      },
+      "CADD_PHRED": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 43
+        }
+      },
+      "CADD_RAW": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 44
+        }
+      },
+      "BLOSUM62": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "headerIndex": 45
+        }
+      }
+    }
+  }
+]
