@@ -1,10 +1,12 @@
 # About
-This is a dta tool that can be used to transform data from one format into another. 
+This is a data tool that can be used to transform data from one format into another. 
 
 The intention is to follow the priciples of: 
 
 - Open for extension
 - Closed for modification
+
+Great emphasis is put on the extendability factors so that it's easy to create new transformers and data sources/destinations and adding value to the project for each one added. 
 
 In the example dataset I used a cvs from Kaggle. 
 
