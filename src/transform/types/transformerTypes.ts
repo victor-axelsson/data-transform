@@ -19,6 +19,8 @@ export interface TableSchema {
             params?: {
                 headerIndex?: number;
                 isPrimaryKey?: boolean;
+                nullable?: boolean;
+                defaultVal?: any;
             };
         }
     }
@@ -36,6 +38,7 @@ export interface DataSource {
 export interface DataDestination {
     name: SupportedDataStorage,
     connect: () => Promise<void>;
+    close: () => Promise<void>;
     write: (table: TableSchema, rows: DataItem[][]) => Promise<void>;
 }
 

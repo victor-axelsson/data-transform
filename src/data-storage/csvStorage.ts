@@ -15,6 +15,9 @@ export default class CsvStorage extends Storage implements DataSource, DataDesti
         this.outputPath = outputPath;
         this.name = "csv";
     }
+    async close() {
+        // Doesn't do anything
+    }
 
     async generateSchema() {
         const tableNames = await this.getTableNames();

@@ -1,0 +1,430 @@
+[
+  {
+    "name": "clinvar_conflicting",
+    "columns": {
+      "id": {
+        "type": "integer",
+        "transformer": "void",
+        "params": {
+          "nullable": false,
+          "defaultVal": null,
+          "isPrimaryKey": true
+        }
+      },
+      "CHROM": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "POS": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "REF": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "ALT": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "AF_ESP": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "AF_EXAC": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "AF_TGP": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "CLNDISDB": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "CLNDISDBINCL": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "CLNDN": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "CLNDNINCL": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "CLNHGVS": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "CLNSIGINCL": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "CLNVC": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "CLNVI": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "MC": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "ORIGIN": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "SSR": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "CLASS": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "Allele": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "Consequence": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "IMPACT": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "SYMBOL": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "Feature_type": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "Feature": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "BIOTYPE": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "EXON": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "INTRON": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "cDNA_position": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "CDS_position": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "Protein_position": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "Amino_acids": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "Codons": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "DISTANCE": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "STRAND": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "BAM_EDIT": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "SIFT": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "PolyPhen": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "MOTIF_NAME": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "MOTIF_POS": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "HIGH_INF_POS": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "MOTIF_SCORE_CHANGE": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "LoFtool": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "CADD_PHRED": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "CADD_RAW": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      },
+      "BLOSUM62": {
+        "type": "string",
+        "transformer": "void",
+        "params": {
+          "nullable": true,
+          "defaultVal": null,
+          "isPrimaryKey": false
+        }
+      }
+    }
+  }
+]

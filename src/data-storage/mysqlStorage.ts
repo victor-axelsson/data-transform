@@ -1,6 +1,6 @@
 import mysql, { Connection, ConnectionOptions } from 'mysql2/promise';
 import Storage from './storage';
-import { DataDestination, DataItem, DataSource, SupportedDataStorage, TableSchema } from "../transform/types/transformerTypes";
+import { DataDestination, DataItem, DataSource, DataType, SupportedDataStorage, TableSchema } from "../transform/types/transformerTypes";
 
 const TYPE_MAPPING = {
     "string": "VARCHAR(255)",
@@ -18,6 +18,15 @@ const DEFAULTS_MAPPING = {
     "float": 0,
     "date": new Date().getTime(),
     "boolean": false
+}
+
+interface DescribeResults {
+    Field: string;
+    Type: string;
+    Null: 'YES' | 'NO';
+    Key: string;
+    Default: any;
+    Extra: any;
 }
 
 export default class MysqlStorage extends Storage implements DataSource, DataDestination {
@@ -109,6 +118,10 @@ export default class MysqlStorage extends Storage implements DataSource, DataDes
         this.connection = await mysql.createConnection(this.options);
     }
 
+    async close() {
+        this.connection?.end();
+    }
+
     getConnection() {
         if (!this.connection) {
             throw new Error("Is not connected to DB")
@@ -120,21 +133,71 @@ export default class MysqlStorage extends Storage implements DataSource, DataDes
     async getTableNames() {
         const con = this.getConnection();
 
-        const [results, fields] = await con.query(
+        const [results, _fields] = await con.query(
             'SELECT table_name FROM information_schema.tables WHERE table_schema = ?;',
             [this.options.database]
         );
 
-        console.log(results)
-
-        return [];
+        return (results as Array<any>).map(r => r.table_name);
     }
 
     async generateTableSchema(tableName: string) {
         return {} as TableSchema;
     }
     async generateSchema() {
-        return {} as TableSchema[];
+        const con = this.getConnection();
+        const tableNames = await this.getTableNames();
+
+        const getSchemaMapping = (mysqlType: string): DataType => {
+
+            const normType = mysqlType.toLowerCase();
+
+            if (normType.includes("varchar") || normType.includes("text")) {
+                return "string"
+            }
+
+            if (normType.includes("int")) {
+                return "integer"
+            }
+
+            if (normType.includes("float") || normType.includes("double")) {
+                return "float";
+            }
+
+            throw new Error(`Could not map type: ${mysqlType}`);
+        }
+
+        const schemas: TableSchema[] = [];
+
+        const r = tableNames.map(async (tableName: string) => {
+            const [results] = await con.query(
+                `DESCRIBE ${tableName}`
+            );
+
+            const schema: TableSchema = {
+                name: tableName,
+                columns: {}
+            };
+
+            const res = results as Array<DescribeResults>;
+            res.forEach((desc: DescribeResults) => {
+                schema.columns[desc.Field] = {
+                    type: getSchemaMapping(desc.Type),
+                    transformer: "void",
+                    params: {
+                        nullable: desc.Null == "YES",
+                        defaultVal: desc.Default,
+                        isPrimaryKey: desc.Key === "PRI"
+                    }
+                }
+            });
+
+            schemas.push(schema);
+        });
+
+        await Promise.all(r);
+
+        return schemas
     }
     async readTransform(table: TableSchema, onRead: (rows: DataItem[][], table: string) => void) {
 

@@ -3,7 +3,6 @@ import MysqlStorage from "./data-storage/mysqlStorage";
 import helper from "./transform/helper";
 
 const main = async () => {
-    const csvStorage = new CsvStorage("dataset/clinvar_conflicting.csv", "transformed.xlsx");
     const mysqlStorage = new MysqlStorage({
         host: 'localhost',
         port: 3307,
@@ -11,9 +10,10 @@ const main = async () => {
         password: 'root',
         database: 'destination',
     });
-    await mysqlStorage.connect()
-    const tableSchemas = await helper.loadTableSchema("src/schemas/genetic-schema.json");
-    await helper.pipeData(csvStorage, mysqlStorage, tableSchemas);
+    await mysqlStorage.connect();
+    const schemas = await mysqlStorage.generateSchema();
+    helper.save("src/schemas/mysql-schema.json", schemas);
+    await mysqlStorage.close();
 }
 
 main(); 
